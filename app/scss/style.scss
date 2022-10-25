@@ -1,0 +1,23 @@
+//settings
+@import "settings/vars";
+@import "settings/fonts";
+@import "settings/reset";
+@import "settings/libs";
+@import "settings/global";
+
+//common blocks
+@import "../blocks/header/header";
+@import "../blocks/footer/footer";
+@import "../blocks/sidebar/sidebar";
+@import "../blocks/sliders/slider";
+@import "../blocks/form/form";
+//main page blocks
+@import "../blocks/main-page/services/services";
+@import "../blocks/main-page/mm/mm";
+@import "../blocks/main-page/led/led";
+@import "../blocks/main-page/rent/rent";
+@import "../blocks/main-page/map-form/map-form";
+//mm page blocks
+@import "../blocks/mm/clients/clients";
+@import "../blocks/mm/targeting/targeting";
+@import "../blocks/mm/targeting-mts/targeting-mts";

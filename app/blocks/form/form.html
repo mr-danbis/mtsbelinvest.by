@@ -1,0 +1,39 @@
+<section class="form">
+    <div class="form__inner">
+        <h2 class="form__title title">
+            Форма обратной связи
+        </h2>
+        <p class="form__text">
+            Отправьте сообщение и наш специалист свяжется с вами в ближайшее время
+        </p>
+
+        <form class="form__fields" action="">
+            <div class="form__field">
+                <label class="form__field-label" for="fio">Ваше ФИО*</label>
+                <input class="form__field-input" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
+            </div>
+            <div class="form__field">
+                <label class="form__field-label" for="email">E-mail*</label>
+                <input class="form__field-input" type="email" name="email" placeholder="name@mail.by" required>
+            </div>
+            <div class="form__field">
+                <label class="form__field-label" for="tel">Номер телефона*</label>
+                <input class="form__field-input" type="text" name="tel" placeholder="+375" required>
+                <span class="form__field-description">Поможет выбрать лучшее время для звонка</span>
+            </div>
+            <div class="form__field">
+                <label class="form__field-label" for="text">Введите текст</label>
+                <textarea class="form__field-input form__field-textarea" type="text" name="text" placeholder="Сообщение"></textarea>
+            </div>
+
+            <button class="form__btn btn">Отправить</button>
+
+            <div class="form__agreement">
+                <input class="form__agreement-checkbox" type="checkbox" name="agreement">
+                <label class="form__agreement-text" for="agreement">
+                    Нажимая кнопку «Отправить»,вы соглашаетесь на обработку <a href="">персональных данных</a>
+                </label>
+            </div>
+        </form>
+    </div>
+</section>

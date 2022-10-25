@@ -1,0 +1,105 @@
+.led {
+    @include adaptiv-marginBottom(90, 45);
+
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        @include adaptiv-paddingBottom(40, 20);
+        @include adaptiv-paddingTop(40, 20);
+        @include adaptiv-paddingRight(40, 20);
+        @include adaptiv-paddingLeft(40, 20);
+    }
+
+    &__info {
+        width: 605px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        &-text {
+            font-weight: 400;
+            @include adaptiv-font(20, 15);
+            line-height: 27px;
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            @include adaptiv-font(20, 18);
+            line-height: 25px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        &-list{
+            margin-bottom: 28px;
+        }
+
+        &-item {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 140%;
+            padding-left: 20px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #CE2C3A;
+                left: 0;
+                top: 5px;
+            }
+            &:not(:last-child){
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        right: -50px;
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 1700px) {
+    .led{
+        &__img{
+            position: static;
+            width: 40%;
+        }
+        &__info{
+            width: 450px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .led{
+        &__content{
+            flex-direction: column;
+        }
+        &__info{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        &__img{
+            width: 400px;
+        }
+    }
+}
+
+
+@media (max-width: 550px) {
+    .led{
+        &__img{
+            width: 100%;
+        }
+    }
+}

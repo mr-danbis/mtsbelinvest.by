@@ -1,0 +1,9 @@
+.clients {
+  background: #f5f5f5;
+  &__container {
+    display: flex;
+  }
+  &__map {
+    position: absolute;
+  }
+}

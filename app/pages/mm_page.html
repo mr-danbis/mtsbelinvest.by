@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('../blocks/head/head.html')
+
+  <body>
+    <div class="wrapper">
+      @@include('../blocks/header/header.html')
+      <!-- /.header -->
+
+      <main class="main">
+          @@include('../blocks/mm/start.html')
+        @@include('../blocks/mm/clients/clients.html')
+        <!-- /.clients -->
+        @@include('../blocks/mm/targeting/targeting.html')
+        <!-- /.targeting -->
+        @@include('../blocks/mm/targeting-mts/targeting-mts.html')
+        <!-- /.targeting-mts -->
+      </main>
+      <!-- /.main -->
+      @@include('../blocks/sidebar/sidebar.html')
+      <!-- /.sidebar -->
+
+      @@include('../blocks/footer/footer.html')
+      <!-- /.footer -->
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

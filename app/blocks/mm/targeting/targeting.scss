@@ -83,5 +83,9 @@
       display: flex;
       justify-content: center;
     }
+    &__info {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 }

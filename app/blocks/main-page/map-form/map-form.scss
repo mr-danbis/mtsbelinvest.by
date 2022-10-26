@@ -1,39 +1,39 @@
-.map-form{
-    @include adaptiv-marginBottom(208,104);
-    position: relative;
-    &__map{
-        height: 890px;
-        iframe{
-            border-radius: 20px;
-            height: 100%;
-        }
+.map-form {
+  @include adaptiv-marginBottom(208, 104);
+  position: relative;
+  &__map {
+    height: 890px;
+    opacity: 50%;
+    iframe {
+      border-radius: 20px;
+      height: 100%;
     }
-    
-    .form{
-        position: absolute;
-        top: -40px;
-    }
+  }
+
+  .form {
+    position: absolute;
+    top: -40px;
+  }
 }
 
-
 @media (max-width: 1500px) {
-    .map-form{
-        .container{
-            width: 90%;
-        }
+  .map-form {
+    .container {
+      width: 90%;
     }
+  }
 }
 
 @media (max-width: 1200px) {
-    .map-form{
-        .form{
-            position: relative;
-            top: 0;
-            width: 100%;
-        }
-        &__map{
-            margin-top: -40px;
-            height: 450px;
-        }
+  .map-form {
+    .form {
+      position: relative;
+      top: 0;
+      width: 100%;
     }
+    &__map {
+      margin-top: -40px;
+      height: 450px;
+    }
+  }
 }

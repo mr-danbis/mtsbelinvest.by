@@ -9,16 +9,14 @@
     display: flex;
     flex-direction: column;
     &-name {
-      display: block;
       @include adaptiv-paddingBottom(12, 10);
-      width: 670px;
+      max-width: 670px;
       font-weight: 700;
       @include adaptiv-font(40, 20);
       color: #1d2023;
     }
     &-description {
-      display: block;
-      width: 515px;
+      max-width: 515px;
       font-weight: 400;
       font-size: 18px;
       color: #333333;
@@ -46,6 +44,8 @@
       padding-right: 6px;
     }
     &-text {
+      position: relative;
+      padding-left: 22px;
       &_name {
         display: block;
         font-weight: 700;
@@ -61,6 +61,14 @@
         line-height: 140%;
         color: #333333;
       }
+      &::before {
+        position: absolute;
+        content: url(/images/icons/checkbox-active.svg);
+        top: 5px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+      }
     }
   }
   &__map {
@@ -68,6 +76,9 @@
     width: 55%;
     right: 0;
     top: 15%;
+    &--hidden {
+      display: none;
+    }
   }
 }
 
@@ -92,44 +103,17 @@
 
 @media (max-width: 930px) {
   .clients {
-    &__container {
-      align-items: center;
-    }
-    &__text {
-      align-items: center;
-      margin-left: -100px;
-      &-name {
-        max-width: 300px;
-      }
-      &-description {
-        max-width: 288px;
-      }
-    }
     &__checkbox {
-      max-width: 400px;
-      margin-right: 20px;
       order: 2;
+      max-width: 100%;
     }
     &__map {
-      position: static;
-      width: 100%;
-      order: 1;
-    }
-  }
-}
-
-@media (max-width: 450px) {
-  .clients {
-    &__text {
-      margin-left: -50px;
-    }
-  }
-}
-
-@media (max-width: 380px) {
-  .clients {
-    &__text {
-      margin-left: 0px;
+      display: none;
+      &--hidden {
+        position: static;
+        display: block;
+        min-width: 930px;
+      }
     }
   }
 }

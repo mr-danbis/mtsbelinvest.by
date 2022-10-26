@@ -55,6 +55,7 @@
     cursor: pointer;
     transition: all .3s;
     color: #1D2023;
+		transition: all 0.3s;
 
     a {
         color: inherit;
@@ -85,7 +86,7 @@
     padding-bottom: 14px;
     display: flex;
     justify-content: flex-end;
-    transition: all .3s;
+		transition: all 0.3s;
     &:hover {
         color: #E30613;
     }
@@ -105,7 +106,7 @@
     justify-content: flex-end;
     a {
         cursor: pointer;
-        transition: all .3s;
+        transition: all 0.3s;
 
         &:not(:last-child) {
             margin-right: 15px;
@@ -117,6 +118,8 @@
     }
 
 }
+
+
 
 
 

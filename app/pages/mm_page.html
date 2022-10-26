@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../blocks/head/head.html')
+  @@include('../blocks/head/head.html')
 
-<body>
+  <body>
     <div class="wrapper mm-page">
-        @@include('../blocks/header/header.html')
-        <!-- /.header -->
+      @@include('../blocks/header/header.html')
+      <!-- /.header -->
 
-        <main class="main">
-            <div class="container">
-                @@include('../blocks/mm/clients/clients.html')
-                <!-- /.clients -->
-                @@include('../blocks/mm/targeting/targeting.html')
-                <!-- /.targeting -->
-                @@include('../blocks/mm/targeting-mts/targeting-mts.html')
-                <!-- /.targeting-mts -->
-                @@include('../blocks/mm/start.html')
-                <!-- /.start -->
-                <!-- @@include('../blocks/sliders/mm/mm-slider.html') -->
-                <!-- /.mm-slider -->
-            </div>
-        </main>
-        <!-- /.main -->
+      <main class="main">
+        @@include('../blocks/mm/clients/clients.html')
+        <!-- /.clients -->
+        <div class="container">
+          @@include('../blocks/mm/targeting/targeting.html')
+          <!-- /.targeting -->
+          @@include('../blocks/mm/targeting-mts/targeting-mts.html')
+          <!-- /.targeting-mts -->
+          @@include('../blocks/mm/start.html')
+          <!-- /.start -->
+          <!-- @@include('../blocks/sliders/mm/mm-slider.html') -->
+          <!-- /.mm-slider -->
+        </div>
+      </main>
+      <!-- /.main -->
 
-        @@include('../blocks/sidebar/sidebar.html')
-        <!-- /.sidebar -->
+      @@include('../blocks/sidebar/sidebar.html')
+      <!-- /.sidebar -->
 
-        @@include('../blocks/footer/footer.html')
-        <!-- /.footer -->
+      @@include('../blocks/footer/footer.html')
+      <!-- /.footer -->
     </div>
     <!-- /.wrapper -->
 
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.min.js"></script>
-</body>
-
+  </body>
 </html>

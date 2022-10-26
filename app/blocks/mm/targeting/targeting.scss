@@ -1,5 +1,4 @@
 .target {
-  background-color: #f5f5f5;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -7,7 +6,7 @@
   }
   &__info {
     width: 400px;
-    height: 271px;
+    height: 280px;
     background: #ffffff;
     border-radius: 20px;
     padding-right: 5px;
@@ -47,7 +46,7 @@
     }
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
   .target {
     .container {
       width: 90%;

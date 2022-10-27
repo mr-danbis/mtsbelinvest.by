@@ -6,6 +6,9 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		width: 86%;
+		margin-left: 94px;
+		margin-bottom: 100px;
 	}
 
 	&__column{
@@ -24,7 +27,7 @@
 	font-family: 'Noto Sans';
 	font-style: normal;
 	font-weight: 700;
-	@include adaptiv-font(45, 20);
+	@include adaptiv-font(45, 18);
 	line-height: 61px;
 	color: #FFFFFF;
 	}
@@ -50,22 +53,46 @@
 		background: #E30611;
 		border-radius: 10px;
 		width: 40%;
+		max-width: 253px;
+		min-width: 219px;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		padding: 20px 30px;
+		margin-top: 20px;
+		transition: all 0.3s;
+		cursor: pointer;
+		&:hover{
+			background-color: #FFFFFF;
+			color: #E30611;
+		}
 	}
+}
+
+@media (max-width: 1600px) {
+		.start{
+			&__container{
+				margin-left: 80px;
+			}
+
+			
+		}
 }
 
 @media (max-width: 1000px) {
 		.start{
+			
+			&__container{
+				margin-left: 60px;
+			}
+			
 			&__text{
 				width:63%;
 			}
 
 			&__button{
-				width: 45%;
+				width: 60%;
 			}
 		}
 }
@@ -74,7 +101,12 @@
 		.start{
 			&__container{
 				flex-direction: column;
+				margin-left: 20px;
 				
+			}
+
+			&__button{
+				width: 253px;
 			}
 
 			&__column{
@@ -96,14 +128,12 @@
 			}
 
 			&__text{
-				width: 220px;
+				min-width: 220px;
+				max-width: 370px;
+				width: 100%;
 				padding-bottom: 20px;
 				
 			}
 
-			&__button{
-				width: 253px;
-				
-			}
 		}
 }

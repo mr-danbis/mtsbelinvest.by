@@ -1,0 +1,54 @@
+.marketing {
+  margin-bottom: 70px;
+
+  &__container {
+    display: flex;
+    position: relative;
+    @include adaptiv-paddingBottom(80, 20);
+    @include adaptiv-paddingTop(80, 20);
+    @include adaptiv-paddingRight(110, 20);
+    @include adaptiv-paddingLeft(110, 20);
+    background: #ffffff;
+    border-radius: 20px;
+  }
+
+  &__info {
+    z-index: 1;
+    width: 415px;
+  }
+
+  &__title {
+    @include adaptiv-font(45, 25);
+    font-weight: 700;
+  }
+
+  &__text {
+    @include adaptiv-font(18, 15);
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+  }
+}
+
+@media (max-width: 650px) {
+  .marketing {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__info {
+      width: 100% !important;
+      margin-bottom: 20px;
+    }
+
+    &__img {
+      position: static;
+    }
+  }
+}

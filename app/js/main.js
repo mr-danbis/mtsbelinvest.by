@@ -54,6 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
   $(".sidebar__nav-item--drop").click(function (event) {
-    $(this).toggleClass("active").next().slideToggle(300);
+    $(this).toggleClass("active").next().slideToggle();
+  });
+
+  $(".answer__content-question").click(function (event) {
+    if ($(".answer__info").hasClass("one")) {
+      $(".answer__content-question").not($(this)).removeClass("active");
+      $(".answer__content-answer").not($(this).next()).slideUp();
+    }
+    $(this).toggleClass("active").next().slideToggle();
   });
 });

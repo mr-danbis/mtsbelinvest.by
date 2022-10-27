@@ -3,8 +3,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		margin-left: 94px;
-		width: 67%;
 		margin-bottom: 170px;
 	}
 
@@ -71,16 +69,13 @@
 		@include adaptiv-font(16, 15);
 		line-height: 140%;
 		color: #FFFFFF;
-		width: 100%;
+		width: 67%;
 	}
 }
 
 @media (max-width: 1600px) {
 		.sets{
-			&__container{
-				width: 75%;
-				margin-left: 70px;
-			}
+			
 
 			#like{
 				width: 20%;
@@ -99,10 +94,7 @@
 @media (max-width: 1000px) {
 	.sets{
 
-		&__container{
-			width: 86%;
-			margin-left: 60px;
-		}
+		
 
 		&__block{
 			width: 100%;
@@ -124,9 +116,7 @@
 
 @media (max-width: 750px) {
 		.sets{
-			&__container{
-				margin-left: 40px;
-			}
+			
 
 			#like{
 				width: 10%;
@@ -138,11 +128,9 @@
 		}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 		.sets{
-			&__container{
-				margin-left: 10px;
-			}
+			
 
 			&__block{
 				flex-direction:column;
@@ -151,6 +139,7 @@
 			&__column{
 				&:first-child{
 					margin-bottom: 10px;
+					padding-right: 0;
 				}
 				padding: 20px 37px 52px 20px;
 			}

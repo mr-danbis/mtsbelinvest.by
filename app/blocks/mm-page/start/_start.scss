@@ -7,7 +7,6 @@
 		flex-direction: row;
 		justify-content: space-between;
 		width: 86%;
-		margin-left: 94px;
 		margin-bottom: 100px;
 	}
 
@@ -19,7 +18,7 @@
 			padding: 70px 0 71px 0;
 		}
 		&:nth-child(2){
-			padding: 82px 0 81px 0;
+			padding: 82px 16px 81px 0;
 		}
 	}
 
@@ -39,7 +38,7 @@
 		@include adaptiv-font(18, 15);
 		line-height: 25px;
 		color: #FFFFFF;
-		width: 60%;
+		width: 65%;
 
 	}
 

@@ -22,9 +22,7 @@
     background: #ffffff;
     border-radius: 20px;
     @include adaptiv-marginBottom(30, 10);
-    @include adaptiv-paddingLeft(40, 16);
-    @include adaptiv-paddingTop(39, 20);
-    @include adaptiv-paddingBottom(39, 20);
+    @include adaptiv-padding(40, 16);
     &-question {
       position: relative;
       font-weight: 700;
@@ -37,7 +35,7 @@
         position: absolute;
         content: url(/images/icons/arrow-down.svg);
         top: 5px;
-        right: 40px;
+        right: 0;
       }
 
       &.active:after {
@@ -47,9 +45,8 @@
     &-answer {
       display: none;
       padding-top: 10px;
-      padding-right: 10px;
       font-weight: 400;
-      font-size: 16px;
+      @include adaptiv-font(16, 12);
       line-height: 140%;
       max-width: 450px;
       color: #1d2023;
@@ -72,13 +69,8 @@
 @media (max-width: 1600px) {
   .answer {
     &__content {
-      &-question {
-        &:after {
-          right: 30px;
-        }
-      }
       &-answer {
-        max-width: 90%;
+        max-width: 100%;
       }
     }
   }
@@ -91,16 +83,6 @@
     }
     &__info {
       margin: 0;
-    }
-    &__content {
-      &-question {
-        &:after {
-          right: 20px;
-        }
-      }
-      &-answer {
-        max-width: 90%;
-      }
     }
   }
 }

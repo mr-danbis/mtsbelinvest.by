@@ -86,6 +86,7 @@
 .main-slider {
   .slider {
     &__item {
+      height: 400px;
       &--two {
         background: url(/images/main-slider/slider2.png);
         background-size: cover;
@@ -135,6 +136,26 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .main-slider {
+    .slider {
+      &__item {
+        height: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-slider {
+    .slider {
+      &__item {
+        height: 310px;
+      }
+    }
+  }
+}
+
 @media (max-width: 650px) {
   .slider {
     &__item {
@@ -178,6 +199,13 @@
         width: 12px;
         height: 12px;
         background-color: #e30613;
+      }
+    }
+  }
+  .main-slider {
+    .slider {
+      &__item {
+        height: 460px;
       }
     }
   }

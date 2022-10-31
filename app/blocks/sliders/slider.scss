@@ -120,6 +120,11 @@
 }
 
 .mm-slider {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-padding(50, 10);
+  }
   .slider {
     &__title {
       margin-bottom: 78px;
@@ -132,6 +137,106 @@
     &__img {
       right: 47px;
       top: 82px;
+    }
+    &__block {
+      display: flex;
+      align-items: flex-start;
+    }
+    &__task {
+      background: #f1f1f4;
+      border-radius: 20px;
+      @include adaptiv-padding(30, 20);
+      @include adaptiv-marginRight(30, 10);
+      &-item {
+        &:not(:first-child) {
+          padding-top: 10px;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(29, 32, 35, 0.2);
+          padding-bottom: 10px;
+        }
+      }
+      &-title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: #333333;
+        padding-bottom: 5px;
+      }
+      &-description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #333333;
+        &--checkbox {
+          position: relative;
+          padding-left: 22px;
+          &:not(:last-child) {
+            @include adaptiv-paddingBottom(8, 6);
+          }
+          &::before {
+            position: absolute;
+            content: url(/images/icons/checkbox-active.svg);
+            top: 3px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+    &__result {
+      background: #f1f1f4;
+      border-radius: 20px;
+      @include adaptiv-padding(30, 20);
+      &-title {
+        position: relative;
+        padding-left: 22px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: #38e749;
+        padding-bottom: 5px;
+        &::before {
+          position: absolute;
+          content: url(/images/icons/checkbox.svg);
+          top: 3px;
+          left: 0;
+          width: 16px;
+          height: 16px;
+        }
+      }
+      &-description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #333333;
+        max-width: 190px;
+      }
+    }
+    &__map-indicator {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1620px) {
+  .mm-slider {
+    .slider {
+      &__block {
+        flex-direction: column;
+      }
+      &__task {
+        margin-bottom: 20px;
+        width: 55%;
+      }
+      &__result {
+        width: 55%;
+      }
+      &__img {
+        right: 30px;
+      }
     }
   }
 }
@@ -151,6 +256,19 @@
     .slider {
       &__item {
         height: 310px;
+      }
+    }
+  }
+  .mm-slider {
+    .slider {
+      &__task {
+        width: 50%;
+      }
+      &__result {
+        width: 50%;
+      }
+      &__img {
+        right: 15px;
       }
     }
   }
@@ -206,6 +324,28 @@
     .slider {
       &__item {
         height: 460px;
+      }
+    }
+  }
+  .mm-slider {
+    .slider {
+      &__task {
+        width: 100%;
+      }
+      &__result {
+        width: 100%;
+      }
+      &__img {
+        position: static;
+        padding-left: 25%;
+        padding-right: 25%;
+      }
+      &__title {
+        margin-bottom: 0;
+      }
+      &__map-indicator {
+        margin-bottom: 20px;
+        display: block;
       }
     }
   }

@@ -1,138 +1,119 @@
-.start{
-	background: #1D2023;
+.start {
+  background: #1d2023;
   border-radius: 20px;
 
-	&__container{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		width: 86%;
-		margin-bottom: 100px;
-	}
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 86%;
+    margin-bottom: 100px;
+    @include adaptiv-marginLeft(94, 16);
+  }
 
-	&__column{
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		&:first-child{
-			padding: 70px 0 71px 0;
-		}
-		&:nth-child(2){
-			padding: 82px 16px 81px 0;
-		}
-	}
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:first-child {
+      padding: 70px 0 71px 0;
+    }
+    &:nth-child(2) {
+      padding: 82px 16px 81px 0;
+    }
+  }
 
-	&__head{
-	font-family: 'Noto Sans';
-	font-style: normal;
-	font-weight: 700;
-	@include adaptiv-font(45, 18);
-	line-height: 61px;
-	color: #FFFFFF;
-	}
+  &__head {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-font(45, 18);
+    line-height: 61px;
+    color: #ffffff;
+  }
 
-	&__text{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 400;
-		@include adaptiv-font(18, 15);
-		line-height: 25px;
-		color: #FFFFFF;
-		width: 65%;
+  &__text {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-font(18, 15);
+    line-height: 25px;
+    color: #ffffff;
+    width: 65%;
+  }
 
-	}
-
-	&__button{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 25px;
-		color: #FFFFFF;
-		background: #E30611;
-		border-radius: 10px;
-		width: 40%;
-		max-width: 253px;
-		min-width: 219px;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		padding: 20px 30px;
-		margin-top: 20px;
-		transition: all 0.3s;
-		cursor: pointer;
-		&:hover{
-			background-color: #FFFFFF;
-			color: #E30611;
-		}
-	}
-}
-
-@media (max-width: 1600px) {
-		.start{
-			&__container{
-				margin-left: 80px;
-			}
-
-			
-		}
+  &__button {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #ffffff;
+    background: #e30611;
+    border-radius: 10px;
+    width: 40%;
+    max-width: 253px;
+    min-width: 219px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    margin-top: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: #ffffff;
+      color: #e30611;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
-		.start{
-			
-			&__container{
-				margin-left: 60px;
-			}
-			
-			&__text{
-				width:63%;
-			}
+  .start {
+    &__text {
+      width: 63%;
+    }
 
-			&__button{
-				width: 60%;
-			}
-		}
+    &__button {
+      width: 60%;
+    }
+  }
 }
 
 @media (max-width: 750px) {
-		.start{
-			&__container{
-				flex-direction: column;
-				margin-left: 20px;
-				
-			}
+  .start {
+    &__container {
+      flex-direction: column;
+    }
 
-			&__button{
-				width: 253px;
-			}
+    &__button {
+      width: 253px;
+    }
 
-			&__column{
-				flex-direction: column;
-				width: 100%;
-				align-self: center;
-				align-items: center;
-				justify-content: center;
+    &__column {
+      flex-direction: column;
+      width: 100%;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
 
-				&:first-child{
-					padding: 20px 0 43px 0;
-				}
+      &:first-child {
+        padding: 20px 0 43px 0;
+      }
 
-				&:nth-child(2){
-					width: 30%;
-					padding: 0;
-					padding-bottom: 41px;
-				}
-			}
+      &:nth-child(2) {
+        width: 30%;
+        padding: 0;
+        padding-bottom: 41px;
+      }
+    }
 
-			&__text{
-				min-width: 220px;
-				max-width: 370px;
-				width: 100%;
-				padding-bottom: 20px;
-				
-			}
-
-		}
+    &__text {
+      min-width: 220px;
+      max-width: 370px;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+  }
 }

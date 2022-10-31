@@ -1,159 +1,142 @@
-.sets{
-	&__container{
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		margin-bottom: 170px;
-	}
+.sets {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 170px;
+  }
 
-	&__name{
-		display: block;
-		@include adaptiv-paddingBottom(40, 20);
-		@include adaptiv-font(40, 20);
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 700;
-		line-height: 54px;
-		color: #1D2023;
-	}
+  &__name {
+    display: block;
+    @include adaptiv-paddingBottom(40, 20);
+    @include adaptiv-font(40, 20);
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 54px;
+    color: #1d2023;
+  }
 
-	&__block{
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		
-	}
+  &__block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 
-	&__column{
-		display: flex;
-		flex-direction: column;
-		background: #1D2023;
-		border-radius: 20px;
-		width: 100%;
-		padding-left: 30px;
-		&:first-child{
-			margin-right: 40px;
-		}
-		@include adaptiv-paddingTop(40, 20);
-		@include adaptiv-paddingRight(90, 37);
-		@include adaptiv-paddingBottom(75, 52);
-		@include adaptiv-paddingLeft(30, 20);
-	
-		
-		
-	}
+  &__column {
+    display: flex;
+    flex-direction: column;
+    background: #1d2023;
+    border-radius: 20px;
+    width: 100%;
+    padding-left: 30px;
+    &:first-child {
+      margin-right: 40px;
+    }
+    @include adaptiv-paddingTop(40, 20);
+    @include adaptiv-paddingRight(90, 37);
+    @include adaptiv-paddingBottom(75, 52);
+    @include adaptiv-paddingLeft(30, 20);
+  }
 
-	#like{
-		width: 16%;
-		padding-bottom:  15px ;
-		min-width: 40px;
-	}
+  #like {
+    width: 16%;
+    padding-bottom: 15px;
+    min-width: 40px;
+  }
 
-	#chip{
-		width: 16%;
-		padding-bottom:  15px ;
-		min-width: 40px;
-	}
+  #chip {
+    width: 16%;
+    padding-bottom: 15px;
+    min-width: 40px;
+  }
 
-	&__head{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 800;
-		@include adaptiv-font(20, 18);
-		line-height: 27px;
-		color: #FFFFFF;
-		padding-bottom: 8px;
-	}
+  &__head {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 800;
+    @include adaptiv-font(20, 18);
+    line-height: 27px;
+    color: #ffffff;
+    padding-bottom: 8px;
+  }
 
-	&__info{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 400;
-		@include adaptiv-font(16, 15);
-		line-height: 140%;
-		color: #FFFFFF;
-		width: 67%;
-	}
+  &__info {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-font(16, 15);
+    line-height: 140%;
+    color: #ffffff;
+    width: 67%;
+  }
 }
 
 @media (max-width: 1600px) {
-		.sets{
-			
+  .sets {
+    #like {
+      width: 20%;
+    }
 
-			#like{
-				width: 20%;
-			}
+    #chip {
+      width: 20%;
+    }
 
-			#chip{
-				width: 20%;
-			}
-
-			&__column{
-				padding-right: 30px;
-			}
-		}
+    &__column {
+      padding-right: 30px;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
-	.sets{
+  .sets {
+    &__column {
+      margin-bottom: 10px;
+    }
+    &__block {
+      width: 100%;
+    }
 
-		
+    #like {
+      width: 20%;
+    }
 
-		&__block{
-			width: 100%;
-		}
-
-		#like{
-			width: 20%;
-		}
-
-		#chip{
-			width: 20%;
-		}
-
-		
-	}
+    #chip {
+      width: 20%;
+    }
+  }
 }
 
 @media (max-width: 750px) {
-		.sets{
-			
+  .sets {
+    #like {
+      width: 10%;
+    }
 
-			#like{
-				width: 10%;
-			}
-	
-			#chip{
-				width: 10%;
-			}
-		}
+    #chip {
+      width: 10%;
+    }
+  }
 }
 
 @media (max-width: 700px) {
-		.sets{
-			
+  .sets {
+    &__block {
+      flex-direction: column;
+    }
+    ъ &__column {
+      &:first-child {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
 
-			&__block{
-				flex-direction:column;
-			}
-ъ
+    &__head {
+      width: 100%;
+    }
 
-			&__column{
-				&:first-child{
-					margin-bottom: 10px;
-					margin-right: 0;
-					
-				}
-				
-			}
-
-			&__head{
-				width: 100%;
-			}
-
-			&__info{
-				width: 100%;
-			}
-
-		}
+    &__info {
+      width: 100%;
+    }
+  }
 }

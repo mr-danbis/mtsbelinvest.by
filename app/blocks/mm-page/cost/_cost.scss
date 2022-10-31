@@ -1,125 +1,173 @@
-.cost{
-	&__container{
-		display: flex;
-		flex-direction: column;
-	}
+.cost {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
 
-	&__name{
-		display: block;
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 700;
-		@include adaptiv-paddingBottom(40, 20);
-		@include adaptiv-font(40, 20);
-		line-height: 54px;
-		color: #1D2023;
+  &__name {
+    display: block;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-paddingBottom(40, 20);
+    @include adaptiv-font(40, 20);
+    line-height: 54px;
+    color: #1d2023;
+  }
 
-	}
+  &__block {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 20px;
+  }
 
-	&__block{
-		display: flex;
-		flex-direction: column;
-		background: #FFFFFF;
-		border-radius: 20px;
-		
-	}
+  &__column {
+    display: flex;
+    flex-direction: row;
+    max-width: 1005px;
+    @include adaptiv-paddingTop(20, 15);
+    @include adaptiv-paddingLeft(53, 20);
+    @include adaptiv-paddingBottom(20, 15);
+    &-border {
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(29, 32, 35, 0.2);
+      }
+    }
+  }
 
-	&__column{
-		display: flex;
-		flex-direction: row;
-		border-bottom: 1px solid rgba(29, 32, 35, 0.2);
-		padding-right: 80px;
-		width: 960px;
-		@include adaptiv-paddingBottom(20, 15);
-		@include adaptiv-paddingTop(40, 20);
-		@include adaptiv-paddingLeft(53, 20);
-	}
+  &__row-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding-right: 5px;
+  }
 
-	&__row-column{
-		display: flex;
-		flex-direction: column;
-		margin-right: 178px;
-		width: 321px;
-		
-		
-	}
+  &__row-row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+  }
 
-	&__row-row{
-		display: flex;
-		flex-direction: row;
-		
-		
-	}
+  &__row {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    &--two {
+      display: flex;
+      flex-direction: column;
+      padding-right: 0;
+    }
+  }
 
-	&__general--margin{
-		margin-right: 0;
-	}
+  &__pack {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-font(20, 18);
+    line-height: 27px;
+    color: #1d2023;
+  }
 
-	&__row{
-		display: flex;
-		flex-direction: column;
-		width: 238px;
-		margin-right: 73px;
-		
-		
-		
-	}
+  &__account {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-font(16, 15);
+    line-height: 140%;
+    color: rgba(29, 32, 35, 0.5);
+  }
 
-	&__pack{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 700;
-		@include adaptiv-font(20, 18);
-		line-height: 27px;
-		color: #1D2023;
-	}
+  &__service {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-font(16, 10);
+    line-height: 140%;
+    color: #1d2023;
+    &--width {
+      max-width: 180px;
+    }
+  }
 
-	&__account{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 400;
-		@include adaptiv-font(16, 15);
-		line-height: 140%;
-		color: rgba(29, 32, 35, 0.5);
-	}
+  &__price {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 800;
+    @include adaptiv-font(25, 15);
+    line-height: 34px;
+    color: #1d2023;
+  }
 
-	&__service{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 400;
-		@include adaptiv-font(16, 10);
-		line-height: 140%;
-		color: #1D2023;
-
-	}
-
-	&__price{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 800;
-		@include adaptiv-font(25, 15);
-		line-height: 34px;
-		color: #1D2023;
-	}
-
-	&__general{
-		@include adaptiv-paddingBottom(30, 12);
-	}
-
-	&__row-column-duo{
-		margin-bottom: 33px;
-	}
+  &__general {
+    display: flex;
+    flex-direction: column;
+    &--first {
+      @include adaptiv-marginBottom(30, 15);
+    }
+  }
 }
 
 @media (max-width: 1600px) {
-		.cost{
-			&__column{
-				width: 80%;
-			}
+  .cost {
+    &__column {
+      width: 95%;
+    }
+    &__service {
+      &--width {
+        max-width: 120px;
+      }
+    }
+  }
+}
 
-			&__row-column{
-				margin-right: 100px;
-			}
+@media (max-width: 1360px) {
+  .cost {
+    &__service {
+      &--mts {
+        max-width: 94px;
+      }
+    }
+  }
+}
 
-		}
+@media (max-width: 876px) {
+  .cost {
+    &__service {
+      &--mts {
+        max-width: 85px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .cost {
+    &__column {
+      flex-direction: column;
+    }
+    &__row {
+      &-column {
+        margin-bottom: 15px;
+      }
+    }
+    &__service {
+      &--mts {
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .cost {
+    &__service {
+      &--mts {
+        max-width: 60px;
+      }
+      &--width {
+        max-width: 100px;
+      }
+    }
+  }
 }

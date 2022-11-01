@@ -2,6 +2,7 @@
   &__container {
     display: flex;
     flex-direction: column;
+    @include adaptiv-marginBottom(70, 50);
   }
 
   &__name {

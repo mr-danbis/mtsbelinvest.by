@@ -14,6 +14,13 @@
     position: absolute;
     top: -40px;
   }
+  [class*="copyrights-pane"] {
+    display: none !important;
+  }
+
+  [class*="ground-pane"] {
+    filter: grayscale(1);
+  }
 }
 
 @media (max-width: 1500px) {

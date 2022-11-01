@@ -1,149 +1,149 @@
-.numbers{
-	&__container{
-		display: flex;
+.numbers {
+  &__container {
+    display: flex;
     flex-direction: column;
-		@include adaptiv-marginTop(70, 40);
-	}
+    @include adaptiv-marginTop(70, 40);
+  }
 
-	&__name{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 700;
-		@include adaptiv-paddingBottom(50, 20);
+  &__name {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiv-paddingBottom(50, 20);
     @include adaptiv-font(40, 20);
     line-height: 54px;
-		line-height: 54px;
-		color: #1D2023;
-	}
+    line-height: 54px;
+    color: #1d2023;
+  }
 
-	&__block{
-		display: flex;
+  &__block {
+    display: flex;
     flex-direction: column;
-	}
+  }
 
-	&__column {
+  &__column {
     display: flex;
     flex-direction: row;
     max-width: 1060px;
     @include adaptiv-paddingTop(25, 15);
     @include adaptiv-paddingBottom(25, 15);
-    
-      &:not(:last-child) {
-        border-bottom: 1px solid rgba(29, 32, 35, 0.2);
-      }
-    
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(29, 32, 35, 0.2);
+    }
   }
 
-	&__row{
-		display: flex;
-		flex-basis: 40%;
-	}
+  &__row {
+    display: flex;
+    flex-basis: 40%;
+  }
 
-	&__row--column{
-		display: flex;
-		flex-direction: column;
-		flex-basis: 40%;
-	}
+  &__row--column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+  }
 
-	&__dept--name{
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 500;
-		@include adaptiv-font(25, 18);
-		line-height: 34px;
-		color: #1D2023;
-	}
+  &__dept--name {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 500;
+    @include adaptiv-font(25, 18);
+    line-height: 34px;
+    color: #1d2023;
+  }
 
-	&__mob--phone{
-		position: relative;
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 900;
-		@include adaptiv-font(20, 18);
-		line-height: 140%;
-		color: #333333;
-		transition: all 0.3s;
-		cursor: pointer;
+  &__mob--phone {
+    position: relative;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 900;
+    @include adaptiv-font(20, 18);
+    line-height: 140%;
+    color: #333333;
+    padding-left: 27px;
+    transition: all 0.3s;
+    cursor: pointer;
     &:hover {
-        color: #E30613;
+      color: #e30613;
     }
-		&::before {
-			position: absolute;
-			content: url(/images/icons/telephone.svg);
-			left: -24px;
-			top: 2px;
-	}
-	}
+    &::before {
+      position: absolute;
+      content: url(/images/icons/telephone.svg);
+      left: 0;
+      top: 4px;
+    }
+  }
 
-	&__home--phone{
-		position: relative;
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 900;
-		@include adaptiv-font(20, 18);
-		line-height: 140%;
-		color: #333333;
-		transition: all 0.3s;
-		cursor: pointer;
+  &__home--phone {
+    position: relative;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 900;
+    @include adaptiv-font(20, 18);
+    line-height: 140%;
+    padding-left: 27px;
+    color: #333333;
+    transition: all 0.3s;
+    cursor: pointer;
     &:hover {
-        color: #E30613;
+      color: #e30613;
     }
 
-		&::before {
-			position: absolute;
-			content: url(/images/icons/la_fax.svg);
-			left: -26px;
-			top: 2px;
-	}
-	}
+    &::before {
+      position: absolute;
+      content: url(/images/icons/la_fax.svg);
+      left: 0;
+      top: 3px;
+    }
+  }
 
-	&__home--mail{
-		position: relative;
-		font-family: 'Noto Sans';
-		font-style: normal;
-		font-weight: 400;
-		@include adaptiv-font(20, 18);
-		line-height: 27px;
-		color: #2D80D3;
-		cursor: pointer;
+  &__home--mail {
+    position: relative;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-font(20, 18);
+    line-height: 27px;
+    padding-left: 27px;
+    color: #2d80d3;
+    cursor: pointer;
     &:hover {
-        color: #1D2023;
+      color: #1d2023;
     }
-		&::before {
-			position: absolute;
-			content: url(/images/icons/bytesize_mail.svg);
-			left: -27px;
-			top: 2px;
-	}
-	}
+    &::before {
+      position: absolute;
+      content: url(/images/icons/bytesize_mail.svg);
+      left: 0;
+      top: 2px;
+    }
+  }
 }
 
 @media (max-width: 1600px) {
-		.numbers{
-			&__dept--name{
-				width: 90%;
-			}
+  .numbers {
+    &__dept--name {
+      width: 90%;
+    }
 
-			&__row--column{
-				flex-basis: 40%;
-			}
-		}
+    &__row--column {
+      flex-basis: 40%;
+    }
+  }
 }
 
 @media (max-width: 700px) {
-	.numbers{
-		&__column{
-			flex-direction: column;
+  .numbers {
+    &__column {
+      flex-direction: column;
+    }
 
-		}
+    &__row--column {
+      margin-left: 25px;
+    }
 
-		&__row--column{
-			margin-left: 25px;
-		}
-
-		&__column--border{
-			border-bottom: 1px solid rgba(29, 32, 35, 0.2);
-		}
-	}
-		
+    &__column--border {
+      border-bottom: 1px solid rgba(29, 32, 35, 0.2);
+    }
+  }
 }

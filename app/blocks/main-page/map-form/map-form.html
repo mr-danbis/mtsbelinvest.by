@@ -1,12 +1,13 @@
 <section class="map-form">
-    <div class="container">
-        <div class="map-form__inner">
-            @@include('../../form/form.html')
-            <!-- /.form -->
+  <div class="container">
+    <div class="map-form__inner">
+      @@include('../../form/form.html')
+      <!-- /.form -->
 
-            <div class="map-form__map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A489bbaedaba15b550e91224eb5993382ac2ef34ec0db45146cf376c57c2f1723&amp;width=100%&amp;lang=ru_RU&amp;scroll=false"></script>
-            </div>
-        </div>
+      <div class="map-form__map" id="maps">
+        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A489bbaedaba15b550e91224eb5993382ac2ef34ec0db45146cf376c57c2f1723&amp;width=100%&amp;lang=ru_RU&amp;scroll=false"></script> -->
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
+      </div>
     </div>
+  </div>
 </section>

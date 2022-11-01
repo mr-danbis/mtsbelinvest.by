@@ -76,9 +76,9 @@ function init() {
 
 	let placemark = new ymaps.Placemark([53.90279733757004,27.551026917561504], {}, {
 		iconLayout: 'defualt#image',
-		iconImageHref: '',
+		iconImageHref: 'https://cdn-icons-png.flaticon.com/512/2776/2776067.png',
 		iconImageSize: [38, 51],
-		iconImageOffset: [10, 10]
+		iconImageOffset: [0, 0]
 	});
 
 

@@ -1,0 +1,32 @@
+<section class="application">
+	<div class="application__inner">
+		<h2 class="application__title">Оформить заявку</h2>
+		<p class="application__text">Оформите заявку и наш специалист свяжется с вами в ближайшее время</p>
+		<form class="application__fields" action="">
+			<div class="apllication__field">
+				<label class="application__field-label" for="fio">Ваше ФИО*</label>
+        <input class="application__field-input" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
+			</div>
+			<div class="application__field">
+				<label class="application__field-label" for="email">E-mail*</label>
+				<input class="application__field-input" type="email" name="email" placeholder="name@mail.by" required>
+			</div>
+			<div class="application__field">
+				<label class="application__field-label" for="tel">Номер телефона*</label>
+				<input class="application__field-input" type="text" name="tel" placeholder="+375" required>
+			</div>
+			<div class="application__field">
+				<label class="application__field-label" for="text">Введите текст</label>
+				<textarea class="application__application-input application_field-textarea" type="text" name="text" placeholder="Сообщение"></textarea>
+			</div>
+			<button class="application__btn btn">Отправить</button>
+
+            <div class="application__agreement">
+                <input class="application__agreement-checkbox" type="checkbox" name="agreement">
+                <label class="application__agreement-text" for="agreement">
+                    Нажимая кнопку «Отправить»,вы соглашаетесь на обработку <a href="">персональных данных</a>
+                </label>
+            </div>
+		</form>
+	</div>
+</section>

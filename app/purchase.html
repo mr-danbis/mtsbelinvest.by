@@ -13,7 +13,7 @@
 </head>
 
   <body>
-    <div class="wrapper main-page">
+    <div class="wrapper purchase">
       <header class="header">
   <div class="container">
     <div class="header__container">
@@ -56,11 +56,7 @@
         </div>
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a
-              class="header__nav-link"
-              href="mm_page.html"
-              >Мтс Маркетолог</a
-            >
+            <a class="header__nav-link" href="mm_page.html">Мтс Маркетолог</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link" href=""
@@ -76,7 +72,7 @@
                 <a class="header__nav-link--drop_content" href="purchase.html">Закупки</a>
               </li>
               <li class="header__nav-item--drop_content">
-                <a class="header__nav-link--drop_content" href=""
+                <a class="header__nav-link--drop_content" href="rent.html"
                   >Аренда недвижимости</a
                 >
               </li>
@@ -122,38 +118,46 @@
 	</div>
 </section>
 
-			<section class="application">
-	<div class="application__inner">
-		<h2 class="application__title">Оформить заявку</h2>
-		<p class="application__text">Оформите заявку и наш специалист свяжется с вами в ближайшее время</p>
-		<form class="application__fields" action="">
-			<div class="apllication__field">
-				<label class="application__field-label" for="fio">Ваше ФИО*</label>
-        <input class="application__field-input" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
-			</div>
-			<div class="application__field">
-				<label class="application__field-label" for="email">E-mail*</label>
-				<input class="application__field-input" type="email" name="email" placeholder="name@mail.by" required>
-			</div>
-			<div class="application__field">
-				<label class="application__field-label" for="tel">Номер телефона*</label>
-				<input class="application__field-input" type="text" name="tel" placeholder="+375" required>
-			</div>
-			<div class="application__field">
-				<label class="application__field-label" for="text">Введите текст</label>
-				<textarea class="application__application-input application_field-textarea" type="text" name="text" placeholder="Сообщение"></textarea>
-			</div>
-			<button class="application__btn btn">Отправить</button>
+			<section class="form">
+    <div class="form__inner">
+        <h2 class="form__title title">
+            Форма обратной связи
+        </h2>
+        <p class="form__text">
+            Отправьте сообщение и наш специалист свяжется с вами в ближайшее время
+        </p>
 
-            <div class="application__agreement">
-                <input class="application__agreement-checkbox" type="checkbox" name="agreement">
-                <label class="application__agreement-text" for="agreement">
+        <form class="form__fields" action="">
+            <div class="form__field">
+                <label class="form__field-label" for="fio">Ваше ФИО*</label>
+                <input class="form__field-input" type="text" name="fio" placeholder="Иванов Иван Иванович" required>
+            </div>
+            <div class="form__field">
+                <label class="form__field-label" for="email">E-mail*</label>
+                <input class="form__field-input" type="email" name="email" placeholder="name@mail.by" required>
+            </div>
+            <div class="form__field">
+                <label class="form__field-label" for="tel">Номер телефона*</label>
+                <input class="form__field-input" type="text" name="tel" placeholder="+375" required>
+                <span class="form__field-description">Поможет выбрать лучшее время для звонка</span>
+            </div>
+            <div class="form__field">
+                <label class="form__field-label" for="text">Введите текст</label>
+                <textarea class="form__field-input form__field-textarea" type="text" name="text" placeholder="Сообщение"></textarea>
+            </div>
+
+            <button class="form__btn btn">Отправить</button>
+
+            <div class="form__agreement">
+                <input class="form__agreement-checkbox" type="checkbox" name="agreement">
+                <label class="form__agreement-text" for="agreement">
                     Нажимая кнопку «Отправить»,вы соглашаетесь на обработку <a href="">персональных данных</a>
                 </label>
             </div>
-		</form>
-	</div>
+        </form>
+    </div>
 </section>
+
 
       </main>
       <!-- /.main -->
@@ -176,7 +180,7 @@
           <a class="sidebar__nav-link--drop_content" href="">Закупки</a>
         </li>
         <li class="sidebar__nav-item--drop_content">
-          <a class="sidebar__nav-link--drop_content" href=""
+          <a class="sidebar__nav-link--drop_content" href="rent.html"
             >Аренда недвижимости</a
           >
         </li>
@@ -289,7 +293,7 @@
       <!-- /.footer -->
     </div>
     <!-- /.wrapper -->
-    <script src="js/jquery-3.6.1.min.js"></script>
+		<script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

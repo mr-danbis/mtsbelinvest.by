@@ -1,8 +1,10 @@
 .numbers{
+
 	&__container{
 		display: flex;
-    flex-direction: column;
+		align-items: flex-start;
     @include adaptiv-marginTop(70, 40);
+		
   }
 
   &__name {
@@ -19,12 +21,15 @@
   &__block {
     display: flex;
     flex-direction: column;
+		@include adaptiv-padding(40, 16);
+		background: #FFFFFF;
+		border-radius: 20px;
+		@include adaptiv-marginRight(40, 20);
   }
 
   &__column {
     display: flex;
     flex-direction: row;
-    max-width: 1060px;
     @include adaptiv-paddingTop(25, 15);
     @include adaptiv-paddingBottom(25, 15);
 
@@ -36,12 +41,13 @@
   &__row {
     display: flex;
     flex-basis: 40%;
+		width: 90%;
   }
 
   &__row--column {
     display: flex;
     flex-direction: column;
-    flex-basis: 40%;
+    
   }
 
   &__dept--name {
@@ -120,17 +126,27 @@
   }
 }
 
-@media (max-width: 1600px) {
+ @media (max-width: 1500px) {
   .numbers {
-    &__dept--name {
-      width: 90%;
-    }
+		&__block{
+			margin: 0;
+			margin-bottom: 20px;
+			width: 100%;
+		}
 
-    &__row--column {
-      flex-basis: 40%;
+		&__container{
+			flex-direction: column;
+			align-items: center;
+		}
+
+  
     }
   }
-}
+
+	.social__container{
+		width: 100%;
+	}
+
 
 @media (max-width: 700px) {
   .numbers {
@@ -146,4 +162,81 @@
       border-bottom: 1px solid rgba(29, 32, 35, 0.2);
     }
   }
+
 }
+
+.social{
+	&__container{
+		display: flex;
+		flex-direction: column;
+		background: #FFFFFF;
+		border-radius: 20px;
+		@include adaptiv-paddingBottom(45, 16);
+		@include adaptiv-paddingTop(45, 16);
+		@include adaptiv-paddingRight(55, 24);
+		@include adaptiv-paddingLeft(55, 24);
+	}
+
+	&__text{
+		display: flex;
+		flex-direction: column;
+		@include adaptiv-marginBottom(34, 15);
+	}
+
+	&__name{
+		font-family: 'Noto Sans';
+		font-style: normal;
+		font-weight: 700;
+		@include adaptiv-paddingBottom(8, 4);
+    @include adaptiv-font(30, 20);
+		color: #1D2023;
+	}
+
+	&__label{
+		font-family: 'Noto Sans';
+		font-style: normal;
+		font-weight: 400;
+		@include adaptiv-font(18, 15);
+		line-height: 25px;
+		color: #1D2023;
+	}
+
+	&__block{
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__network{
+		display: flex;
+		flex-direction: row;
+		padding-right: 17px;
+		}
+
+	&__icon{
+		&:not(:last-child) {
+			@include adaptiv-paddingRight(17, 20);
+		}
+	}	
+
+	&__image {
+		
+		transition: all 0.3s;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}	
+}
+
+@media (max-width: 475px) {
+		.social{
+			&__block{
+				flex-direction: column;
+			}
+
+			&__network{
+				padding-right: 0;
+				padding-bottom: 20px;
+			}
+		}
+}
+

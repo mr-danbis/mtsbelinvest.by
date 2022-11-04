@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const mainPageSlider = new Slider();
   const mmPageSlider = new Slider();
+  const rentPageSlider = new Slider();
 
   if (wrapper.classList.contains("main-page")) {
     mainPageSlider.addSlider(".main-slider", {
@@ -28,6 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
     mmPageSlider.addSlider(".mm-slider", {
       items: 1,
       margin: 40,
+    });
+  }
+
+  if (wrapper.classList.contains("rent-page")) {
+    rentPageSlider.addSlider(".rent-slider__container", {
+      margin: 40,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        700: {
+          items: 2,
+        },
+        1430: {
+          items: 3,
+        },
+      },
     });
   }
 
@@ -50,6 +68,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   openMobileSidebar();
+
+  class formTitle {
+    constructor(title, page) {
+      this.title = title;
+      this.page = page;
+    }
+    change(title, page) {
+      if (wrapper.classList.contains(page)) {
+        document.querySelector(".form__title").innerHTML = title;
+      }
+    }
+  }
+
+  const rentPageFormTitle = new formTitle();
+  rentPageFormTitle.change("Оформить заявку", "rent-page");
+
+	const purchasePageFormTitle = new formTitle();
+  purchasePageFormTitle.change("Оформить заявку", "purchase");
 });
 
 $(document).ready(function () {
@@ -65,8 +101,6 @@ $(document).ready(function () {
     $(this).toggleClass("active").next().slideToggle();
   });
 });
-
-
 
 function init() {
 	let map = new ymaps.Map('maps', {

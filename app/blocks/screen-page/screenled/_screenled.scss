@@ -92,6 +92,7 @@
 		@include adaptiv-font(20, 18);
 		line-height: 27px;
 		color: #1D2023;
+		transition: all 0.3s;
 		&:hover{
 			color: #E30613;
 		}
@@ -119,10 +120,14 @@
 	.screenled{
 			&__img{
 					position: static;
-					width: 40%;
+					width: 39%;
 			}
 			&__info{
-					width: 700px;
+					width: 680px;
+			}
+
+			&__social{
+				min-width: 285px;
 			}
 	}
 }
@@ -140,6 +145,9 @@
 					width: 400px;
 			}
 
+			&__social{
+				min-width: 249px;
+			}
 
 			&__support{
 				flex-direction: column;
@@ -152,6 +160,7 @@
 			border-top: 1px solid rgba(175, 177, 181, 0.5);
 			padding-top: 20px;
 			margin-top: 20px;
+			
 			}
 	}
 }

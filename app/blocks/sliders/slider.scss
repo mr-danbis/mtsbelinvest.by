@@ -281,17 +281,73 @@
     flex-direction: column;
   }
   &__img {
-    width: 100%;
+    border-radius: 20px;
     overflow: hidden;
+
+    &--one {
+      height: 470px;
+    }
     &--first {
       @include adaptiv-marginBottom(20, 10);
-    }
-
-    &:not(:last-child) {
-      @include adaptiv-marginRight(20, 10);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     &--down {
       display: flex;
+      overflow: hidden;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+      .owl {
+        &-nav {
+          button {
+            opacity: 0.3;
+            width: 30px;
+            height: 30px;
+          }
+        }
+        &-stage-outer {
+          padding-bottom: 0;
+        }
+        &-prev {
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          transform: translate(0, -50%);
+        }
+
+        &-next {
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+  }
+  &--up {
+    position: relative;
+    .owl {
+      &-nav {
+        button {
+          opacity: 0.3;
+        }
+      }
+      &-stage-outer {
+        padding-bottom: 20px;
+      }
+      &-prev {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translate(0, -50%);
+      }
+
+      &-next {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
     }
   }
 }
@@ -314,13 +370,30 @@
       }
     }
   }
+  .rent_kalv-slider {
+    &__img {
+      &--one {
+        height: 350px;
+      }
+    }
+  }
 }
 
 @media (max-width: 1500px) {
   .main-slider {
     .slider {
       &__item {
-        height: 350px;
+        height: 370px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .rent_kalv-slider {
+    &__img {
+      &--one {
+        height: 300px;
       }
     }
   }
@@ -344,6 +417,26 @@
       }
       &__img {
         right: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .rent_kalv-slider {
+    &__img {
+      &--one {
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .rent_kalv-slider {
+    &__img {
+      &--down {
+        display: none;
       }
     }
   }

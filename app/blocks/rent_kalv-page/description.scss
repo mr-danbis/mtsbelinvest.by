@@ -21,7 +21,7 @@
   }
   &__slider {
     @include adaptiv-paddingRight(40, 20);
-    flex-basis: 50%;
+    width: 50%;
   }
   &__info {
     background: #ffffff;
@@ -71,7 +71,9 @@
       flex-direction: column;
     }
     &__slider {
+      width: 100%;
       padding: 0;
+      margin-bottom: -50px;
     }
   }
 }

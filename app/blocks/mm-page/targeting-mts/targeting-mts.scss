@@ -28,7 +28,6 @@
     &__block {
         display: flex;
         justify-content: space-between;
-        @include adaptiv-paddingBottom(80, 40);
     }
 
     &__info {
@@ -57,7 +56,7 @@
             font-weight: 400;
             @include adaptiv-font(16, 15);
             line-height: 140%;
-
+            height: 70px;
             color: #333333;
         }
     }

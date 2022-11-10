@@ -110,6 +110,19 @@ document.addEventListener("DOMContentLoaded", function () {
   purchasePageFormTitle.change("Оформить заявку", "purchase");
 });
 
+
+
+function openForm(){
+    const formBtn = document.querySelectorAll('.form-btn');
+    const modalForm = document.querySelector('.modal-form');
+    formBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modalForm.style.display = 'block';
+        });
+    });
+}
+openForm();
+
 $(document).ready(function () {
   $(".sidebar__nav-item--drop").click(function (event) {
     $(this).toggleClass("active").next().slideToggle();

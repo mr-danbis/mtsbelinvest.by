@@ -4,13 +4,14 @@
 @import "settings/reset";
 @import "settings/libs";
 @import "settings/global";
-
 //common blocks
 @import "../blocks/header/header";
 @import "../blocks/footer/footer";
 @import "../blocks/sidebar/sidebar";
 @import "../blocks/sliders/slider";
 @import "../blocks/form/form";
+@import "../blocks/modals/form/modal-form";
+@import "../blocks/modals/request/modal-request";
 //main page blocks
 @import "../blocks/main-page/services/services";
 @import "../blocks/main-page/mm/mm";
@@ -31,5 +32,7 @@
 @import "../blocks/contacts-page/juridical/juridical";
 //rent-kalv page blocks
 @import "../blocks/rent_kalv-page/description";
+//purchase page
 @import "../blocks/purchase-page/info/info";
+//screen page
 @import "../blocks/screen-page/screenled/screenled";

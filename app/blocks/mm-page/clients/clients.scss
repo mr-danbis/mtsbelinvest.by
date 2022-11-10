@@ -10,7 +10,7 @@
     flex-direction: column;
     &-name {
       @include adaptiv-paddingBottom(12, 10);
-      max-width: 670px;
+      max-width: 745px;
       font-weight: 700;
       @include adaptiv-font(40, 20);
       color: #1d2023;
@@ -113,4 +113,15 @@
       }
     }
   }
+}
+
+
+@media (max-width: 650px) {
+    .clients{
+        &__map{
+            &--hidden{
+                margin-top: -40%;
+            }
+        }
+    }
 }

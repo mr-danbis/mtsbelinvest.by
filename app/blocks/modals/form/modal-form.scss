@@ -1,0 +1,18 @@
+.modal-form {
+    display: none;
+    .form {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+    }
+}
+
+@media (max-width: 850px) {
+    .modal-form {
+        .form {
+            width: 90%;
+        }
+    }
+}

@@ -19,6 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const rentPageSlider = new Slider();
   const rentKalvPageSlider = new Slider();
   const rentKalvDownPageSlider = new Slider();
+	const screenSlider = new Slider();
+
+	if (wrapper.classList.contains("screen-page")) {
+		screenSlider.addSlider(".screen-slider--up", {
+      items: 1,
+      margin: 40,
+    });
+
+	}		
 
   if (wrapper.classList.contains("main-page")) {
     mainPageSlider.addSlider(".main-slider", {

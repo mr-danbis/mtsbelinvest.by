@@ -3,13 +3,17 @@
   @@include('../blocks/head/head.html')
 
   <body>
-    <div class="wrapper main-page">
+    <div class="wrapper screen-page">
       @@include('../blocks/header/header.html')
       <!-- /.header -->
 
       <main class="main">
         <div class="container">
-          @@include('../blocks/screen-page/screenled/screenled.html')
+          @@include('../blocks/screen-page/screenled/_screenled.html')
+
+					@@include('../blocks/screen-page/location/_location.html')
+
+					@@include('../blocks/screen-page/screenled-slider/_screenled-slider.html')
       </main>
       <!-- /.main -->
 

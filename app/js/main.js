@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const rentPageFormTitle = new formTitle();
   rentPageFormTitle.change("Оформить заявку", "rent-page");
-  if (wrapper.classList.contains("rent-page")) {
+  if (!wrapper.classList.contains("main-page")) {
     document.querySelector(".form").style.marginBottom = "170px";
   }
 

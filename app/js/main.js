@@ -19,15 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const rentPageSlider = new Slider();
   const rentKalvPageSlider = new Slider();
   const rentKalvDownPageSlider = new Slider();
-	const screenSlider = new Slider();
+  const screenSlider = new Slider();
 
-	if (wrapper.classList.contains("screen-page")) {
-		screenSlider.addSlider(".screen-slider--up", {
+  if (wrapper.classList.contains("screen-page")) {
+    screenSlider.addSlider(".screen-slider--up", {
       items: 1,
       margin: 40,
     });
-
-	}		
+  }
 
   if (wrapper.classList.contains("main-page")) {
     mainPageSlider.addSlider(".main-slider", {
@@ -119,16 +118,14 @@ document.addEventListener("DOMContentLoaded", function () {
   purchasePageFormTitle.change("Оформить заявку", "purchase");
 });
 
-
-
-function openForm(){
-    const formBtn = document.querySelectorAll('.form-btn');
-    const modalForm = document.querySelector('.modal-form');
-    formBtn.forEach(btn => {
-        btn.addEventListener('click', () => {
-            modalForm.style.display = 'block';
-        });
+function openForm() {
+  const formBtn = document.querySelectorAll(".form-btn");
+  const modalForm = document.querySelector(".modal");
+  formBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modalForm.style.display = "block";
     });
+  });
 }
 openForm();
 

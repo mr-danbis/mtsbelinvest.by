@@ -92,6 +92,7 @@
 
 @media (max-width: 900px) {
     .screenled-slider {
+        padding-bottom: 30px;
         &__item {
             flex-direction: column;
         }
@@ -117,7 +118,7 @@
         .owl-dots{
             display: flex;
             align-items: center;
-                justify-content: center;
+            justify-content: center;
         }
     }
 }
@@ -126,6 +127,5 @@
 @media (max-width: 650px) {
     .screenled-slider {
         width: 90%;
-        padding-bottom: 30px;
     }
 }

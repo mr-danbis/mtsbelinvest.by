@@ -3,6 +3,10 @@
   position: relative;
   &__map {
     height: 890px;
+    .ymaps-2-1-79-controls__control{
+        right: 10px !important;
+        left: auto !important;
+    }
     iframe {
       border-radius: 20px;
       height: 100%;

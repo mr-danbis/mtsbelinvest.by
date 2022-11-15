@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (wrapper.classList.contains("rent_kalv-page")) {
         rentKalvPageSlider.addSlider(".rent_kalv-slider--up", {
             items: 1,
+            margin: 20,
         });
         rentKalvDownPageSlider.addSlider(".rent_kalv-slider__img--down", {
             items: 4,
@@ -116,45 +117,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const purchasePageFormTitle = new formTitle();
     purchasePageFormTitle.change("Оформить заявку", "purchase");
-});
-
-function openForm() {
-    const wrapper = document.querySelector(".wrapper");
-    const formBtn = document.querySelectorAll(".form-btn");
-    const closeFormBtn = document.querySelectorAll(".form__close");
-    const modalForm = document.querySelector(".modal");
-    const startBtn = document.querySelector(".start__button");
-    const closeModalFormBtn = document.querySelectorAll(".modal-request__form--close");
-    const modalRequestForm = document.querySelector(".modal-request");
-
-    formBtn.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            modalForm.style.display = "block";
-        });
-    });
-
-    closeFormBtn.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            modalForm.style.display = "none";
-        });
-    });
 
 
-    if (wrapper.classList.contains('mm-page')) {
 
-        startBtn.addEventListener("click", () => {
-            modalRequestForm.style.display = "block";
-        });
+    function openForm() {
+        const formBtn = document.querySelectorAll(".form-btn");
+        const closeFormBtn = document.querySelectorAll(".form__close");
+        const modalForm = document.querySelector(".modal");
+        const startBtn = document.querySelector(".start__button");
+        const closeModalFormBtn = document.querySelectorAll(".modal-request__form--close");
+        const modalRequestForm = document.querySelector(".modal-request");
 
-        closeModalFormBtn.forEach((btn) => {
+        formBtn.forEach((btn) => {
             btn.addEventListener("click", () => {
-                modalRequestForm.style.display = "none";
+                modalForm.style.display = "block";
             });
         });
+
+        closeFormBtn.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                modalForm.style.display = "none";
+            });
+        });
+
+
+        if (wrapper.classList.contains('mm-page')) {
+
+            startBtn.addEventListener("click", () => {
+                modalRequestForm.style.display = "block";
+            });
+
+            closeModalFormBtn.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    modalRequestForm.style.display = "none";
+                });
+            });
+        }
+
+    }
+    openForm();
+
+
+
+    function showImg(event) {
+        event = event || window.event;
+        let iconImg = event.Target || event.srcElement;
+        if (iconImg.tagName == "IMG") {
+            const activeSlide = document.querySelector(".rent_kalv-slider--up").querySelector('.active').querySelector('.rent_kalv-slider__img--first');
+                activeSlide.src = iconImg.getAttribute('src');
+        }
     }
 
-}
-openForm();
+
+    const imgWrapper = document.querySelector('.rent_kalv-slider__img--down');
+    imgWrapper.addEventListener('click', (e)=> {
+        showImg(e);
+    });
+});
+
 
 
 

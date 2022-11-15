@@ -1,0 +1,131 @@
+.screenled-slider {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 20px;
+    @include adaptiv-marginTop(80, 50);
+    @include adaptiv-marginBottom(170, 110);
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include adaptiv-paddingBottom(40, 20);
+        @include adaptiv-paddingTop(40, 20);
+        @include adaptiv-paddingRight(40, 16);
+        @include adaptiv-paddingLeft(40, 16);
+
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        justify-content: space-between;
+        min-width: 256px;
+    }
+
+    &__head {
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 700;
+        @include adaptiv-font(30, 20);
+        line-height: 41px;
+        color: #1D2023;
+        margin-bottom: 12px;
+
+    }
+
+    &__description {
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 400;
+        @include adaptiv-font(18, 15);
+        line-height: 140%;
+        color: #1D2023;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-family: 'Noto Sans';
+        font-style: normal;
+        font-weight: 600;
+        @include adaptiv-font(18, 15);
+        line-height: 140%;
+        color: #1D2023;
+
+    }
+
+    &__img {
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    &__image {
+        width: 55%;
+    }
+
+    .owl-stage-outer {
+        padding-bottom: 0;
+    }
+
+    .owl-nav {
+        justify-content: space-between;
+        right: 3.5%;
+        position: absolute;
+        width: 50%;
+
+        button{
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .owl-prev{
+            background-image: url(/images/icons/arrow-slider-prev-white.svg);
+        }
+        .owl-next{
+            background-image: url(/images/icons/arrow-slider-next-white.svg);
+        }
+    }
+
+
+}
+
+@media (max-width: 900px) {
+    .screenled-slider {
+        &__item {
+            flex-direction: column;
+        }
+
+        &__info {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__head {
+            line-height: 30px;
+        }
+
+
+        .owl-nav{
+            display: none;
+        }
+
+        .owl-dots{
+            display: flex;
+            align-items: center;
+                justify-content: center;
+        }
+    }
+}
+
+
+@media (max-width: 650px) {
+    .screenled-slider {
+        width: 90%;
+        padding-bottom: 30px;
+    }
+}

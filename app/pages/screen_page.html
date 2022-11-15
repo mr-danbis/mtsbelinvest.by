@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('../blocks/head/head.html')
+@@include('../blocks/head/head.html')
 
-  <body>
+<body>
     <div class="wrapper screen-page">
-      @@include('../blocks/header/header.html')
-      <!-- /.header -->
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
 
-      <main class="main">
-        <div class="container">
-          @@include('../blocks/screen-page/screenled/_screenled.html')
+        <main class="main">
+            <div class="container">
+                @@include('../blocks/screen-page/screenled/_screenled.html')
 
-					@@include('../blocks/screen-page/location/_location.html')
+                @@include('../blocks/screen-page/location/_location.html')
 
-					@@include('../blocks/screen-page/screenled-slider/_screenled-slider.html')
-      </main>
-      <!-- /.main -->
+            </div>
+            @@include('../blocks/sliders/screenled/screenled.html')
+        </main>
+        <!-- /.main -->
 
-      @@include('../blocks/sidebar/sidebar.html')
-      <!-- /.sidebar -->
+        @@include('../blocks/sidebar/sidebar.html')
+        <!-- /.sidebar -->
 
-      @@include('../blocks/modals/form/modal-form.html')
-      <!-- /.modal -->
+        @@include('../blocks/modals/form/modal-form.html')
+        <!-- /.modal -->
 
-      @@include('../blocks/footer/footer.html')
-      <!-- /.footer -->
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
     </div>
     <!-- /.wrapper -->
 
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.min.js"></script>
-  </body>
+</body>
+
 </html>

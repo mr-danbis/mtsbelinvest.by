@@ -4,6 +4,27 @@
     margin-left: auto;
     margin-right: auto;
 
+    .owl {
+
+        &-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border: 1px solid #e30613;
+            border-radius: 50%;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        &-dot.active {
+            width: 12px;
+            height: 12px;
+            background-color: #e30613;
+        }
+    }
+
     &__item {
         display: flex;
         position: relative;

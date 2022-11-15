@@ -26,7 +26,7 @@
 
 @media (max-width: 850px) {
   .modal {
-    &-form {
+    &__form {
       .form {
         width: 90%;
       }
@@ -36,7 +36,7 @@
 
 @media (max-height: 1020px) {
   .modal {
-    &-form {
+    &__form {
       .form {
         &__field {
           &-textarea {
@@ -50,7 +50,7 @@
 
 @media (max-height: 930px) {
   .modal {
-    &-form {
+    &__form {
       .form {
         &__field {
           &-textarea {
@@ -67,7 +67,7 @@
 
 @media (max-height: 840px) {
   .modal {
-    &-form {
+    &__form {
       .form {
         max-width: 500px;
         padding: 60px 40px 30px 40px;
@@ -100,7 +100,7 @@
 
 @media (max-height: 650px) {
   .modal {
-    &-form {
+    &__form {
       .form {
         padding: 40px 40px 15px 40px;
       }

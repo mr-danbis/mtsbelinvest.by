@@ -208,11 +208,7 @@
   }
 
   .numbers__block {
-    width: 45%;
-  }
-
-  .social__container {
-    width: 50%;
+    flex-basis: 50%;
   }
 
   .numbers__row,

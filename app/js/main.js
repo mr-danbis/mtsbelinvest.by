@@ -120,10 +120,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function openForm() {
   const formBtn = document.querySelectorAll(".form-btn");
+  const closeFormBtn = document.querySelectorAll(".form__close");
   const modalForm = document.querySelector(".modal");
+
+  const modalFormBtn = document.querySelectorAll(".modal-form__btn");
+  const closeModalFormBtn = document.querySelectorAll(
+    ".modal-request__form--close"
+  );
+  const modalRequestForm = document.querySelector(".modal-request");
+
   formBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
       modalForm.style.display = "block";
+    });
+  });
+
+  closeFormBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modalForm.style.display = "none";
+    });
+  });
+
+  modalFormBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modalRequestForm.style.display = "block";
+    });
+  });
+
+  closeModalFormBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      modalRequestForm.style.display = "none";
     });
   });
 }

@@ -1,0 +1,68 @@
+.modal-request {
+  display: none;
+  &__overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f1f1f4;
+    opacity: 0.4;
+  }
+  &__form {
+    background: #ffffff;
+    border-radius: 50px;
+    @include adaptiv-paddingTop(140, 76);
+    @include adaptiv-paddingLeft(53, 38);
+    @include adaptiv-paddingRight(53, 38);
+    @include adaptiv-paddingBottom(115, 71);
+    max-width: 581px;
+    position: absolute;
+    filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.07));
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+
+    &--close {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      cursor: pointer;
+    }
+
+    &--done {
+      margin: auto;
+      @include adaptiv-paddingBottom(40, 30);
+    }
+
+    &--title {
+      @include adaptiv-paddingBottom(10, 4);
+    }
+
+    &--tit {
+      font-weight: 700;
+      @include adaptiv-font(40, 20);
+      text-align: center;
+      color: #1d2023;
+    }
+
+    &--text {
+      font-weight: 400;
+      @include adaptiv-font(18, 15);
+      line-height: 25px;
+      margin: auto;
+      text-align: center;
+      color: #1d2023;
+      max-width: 294px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .modal-request {
+    &__form {
+      width: 90%;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .modal {
   display: none;
-  &-form {
+  &__form {
     .form {
       position: absolute;
       filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.07));
@@ -8,9 +8,12 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 10000;
+      &__close {
+        display: block;
+      }
     }
   }
-  &-overlay {
+  &__overlay {
     position: fixed;
     left: 0;
     right: 0;

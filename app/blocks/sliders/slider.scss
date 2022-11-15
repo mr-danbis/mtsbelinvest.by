@@ -89,8 +89,6 @@
 .main-slider {
     .slider {
         &__item {
-            height: 400px;
-
             &--two {
                 background: url(/images/main-slider/slider2.png);
                 background-size: cover;
@@ -113,7 +111,7 @@
         }
 
         &__info {
-            width: 415px;
+            width: 40%;
         }
 
         &__img {
@@ -489,16 +487,6 @@
     }
 }
 
-@media (max-width: 1500px) {
-    .main-slider {
-        .slider {
-            &__item {
-                height: 370px;
-            }
-        }
-    }
-}
-
 @media (max-width: 1400px) {
     .rent_kalv-slider {
         &__img {
@@ -543,14 +531,6 @@
     .slider {
         width: 90%;
 
-    }
-
-    .main-slider {
-        .slider {
-            &__item {
-                height: 310px;
-            }
-        }
     }
 
     .mm-slider {
@@ -642,10 +622,6 @@
 
     .main-slider {
         .slider {
-            &__item {
-                height: 100%;
-            }
-
             &__img {
                 width: 100%;
             }

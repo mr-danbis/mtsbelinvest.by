@@ -620,6 +620,107 @@
 </section>
         <!-- /.sidebar -->
 
+        <section class="modal">
+  <div class="modal__overlay"></div>
+  <div class="modal__form"><section class="form">
+  <div class="form__inner">
+    <img class="form__close" src="images/icons/cross.svg" alt="Закрыть форму" />
+    <h2 class="form__title title">Форма обратной связи</h2>
+    <p class="form__text">
+      Отправьте сообщение и наш специалист свяжется с вами в ближайшее время
+    </p>
+
+    <form class="form__fields" action="">
+      <div class="form__field">
+        <label class="form__field-label" for="fio">Ваше ФИО*</label>
+        <input
+          class="form__field-input"
+          type="text"
+          name="fio"
+          placeholder="Иванов Иван Иванович"
+          required
+        />
+      </div>
+      <div class="form__field">
+        <label class="form__field-label" for="email">E-mail*</label>
+        <input
+          class="form__field-input"
+          type="email"
+          name="email"
+          placeholder="name@mail.by"
+          required
+        />
+      </div>
+      <div class="form__field">
+        <label class="form__field-label" for="tel">Номер телефона*</label>
+        <input
+          class="form__field-input"
+          type="text"
+          name="tel"
+          placeholder="+375"
+          required
+        />
+        <span class="form__field-description"
+          >Поможет выбрать лучшее время для звонка</span
+        >
+      </div>
+      <div class="form__field">
+        <label class="form__field-label" for="text">Введите текст</label>
+        <textarea
+          class="form__field-input form__field-textarea"
+          type="text"
+          name="text"
+          placeholder="Сообщение"
+        ></textarea>
+      </div>
+
+      <button class="form__btn btn modal-form__btn">Отправить</button>
+
+      <div class="form__agreement">
+        <input
+          class="form__agreement-checkbox"
+          type="checkbox"
+          name="agreement"
+        />
+        <label class="form__agreement-text" for="agreement">
+          Нажимая кнопку «Отправить»,вы соглашаетесь на обработку
+          <a href="">персональных данных</a>
+        </label>
+      </div>
+    </form>
+  </div>
+</section>
+</div>
+</section>
+
+        <!-- /.modal -->
+
+        <section class="modal-request">
+  <div class="modal-request__overlay"></div>
+  <div class="modal-request__form">
+    <img
+      class="modal-request__form--close"
+      src="images/icons/cross.svg"
+      alt="Закрыть форму"
+    />
+    <img
+      class="modal-request__form--done"
+      src="images/icons/done.svg"
+      alt="Готово!"
+    />
+    <div class="modal-request__form--title">
+      <h2 class="modal-request__form--tit">Спасибо,</h2>
+      <h2 class="modal-request__form--tit">Ваша заявка принята!</h2>
+    </div>
+
+    <div class="modal-request__form--text">
+      Наш менеджер свяжется с вами в ближайщее время
+    </div>
+  </div>
+</section>
+
+        <!-- /.modal -->
+
         <footer class="footer">
     <div class="container">
         <div class="footer_container">

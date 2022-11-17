@@ -120,10 +120,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function openForm() {
-        const formBtn = document.querySelectorAll(".form-btn");
+        const formBtn = document.querySelectorAll(".form-btn-open");
         const closeFormBtn = document.querySelectorAll(".form__close");
         const modalForm = document.querySelector(".modal");
-        const startBtn = document.querySelector(".start__button");
+        const modalFormBtn = document.querySelectorAll(".modal-form__btn");
         const closeModalFormBtn = document.querySelectorAll(".modal-request__form--close");
         const modalRequestForm = document.querySelector(".modal-request");
 
@@ -140,18 +140,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        if (wrapper.classList.contains('mm-page')) {
 
-            startBtn.addEventListener("click", () => {
+        modalFormBtn.forEach(btn => {
+            btn.addEventListener("click", () => {
                 modalRequestForm.style.display = "block";
+                modalForm.style.display = "none";
             });
+        });
 
-            closeModalFormBtn.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    modalRequestForm.style.display = "none";
-                });
+        closeModalFormBtn.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                modalRequestForm.style.display = "none";
             });
-        }
+        });
 
     }
     openForm();
